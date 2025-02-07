@@ -1,7 +1,7 @@
-#DEPENDENCIES
+#DEPENDENCIES <br>
 API KEYS in .env <br>
 
-#Packages
+#Packages <br>
 pip install langchain <br>
 pip install langchain deepseek <br>
 pip install pdfplumber <br>
