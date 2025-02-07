@@ -1,10 +1,10 @@
 #DEPENDENCIES
-API KEYS in .env, 
+API KEYS in .env <br>
 
 #Packages
-+pip install langchain
-+pip install langchain deepseek
-+pip install pdfplumber
-+pip install langchain-community
-+pip install pymupdf
-+from langchain.text_splitter import RecursiveCharacterTextSplitter
+pip install langchain <br>
+pip install langchain deepseek <br>
+pip install pdfplumber <br>
+pip install langchain-community <br>
+pip install pymupdf <br>
+from langchain.text_splitter import RecursiveCharacterTextSplitter <br>
