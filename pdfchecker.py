@@ -50,4 +50,4 @@ def listOfValidatedPDFs(directory):
 
 directory_path = grants.PDF_PATH
 result = listOfValidatedPDFs(directory_path)
-print(result)
+

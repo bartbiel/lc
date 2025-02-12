@@ -3,8 +3,7 @@ import os
 from pdfchecker import listOfValidatedPDFs
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-#from langchain_community.vectorstores import Chroma
-#from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+
 
 
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
@@ -29,7 +28,9 @@ def documentSplitter():
     splits = text_splitter.split_documents(docs)
     return splits
 
-# Embed
 
+
+
+    
 
 

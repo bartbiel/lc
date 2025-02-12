@@ -6,6 +6,7 @@ load_dotenv()
 LANGCHAIN_API_KEY = os.getenv("API_LC")
 DEEPSEEK_API_KEY=os.getenv("API_DS")
 OPENAI_API_KEY=os.getenv("API_01")
+OPENAI_API_KEYb=os.getenv("API_01b")
 
 #Access source folder
 PDF_PATH=os.getenv("PDF_PATH")
