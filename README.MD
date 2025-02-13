@@ -11,3 +11,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter <br>
 pip install langchain-openai <br>
 pip install chromadb <br>
 pip install -U sentence-transformers <br>
+pip install fpdf <br>
+
+<br>
+

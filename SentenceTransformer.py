@@ -19,7 +19,7 @@ def GenerateEmbeddings(embedding_model):
 def StoreEmbeddingsinChroma(embeddings, split_text_content):
      
     # Initialize ChromaDB
-    client = chromadb.PersistentClient(path="vector_db")
+    client = chromadb.PersistentClient(path="bo2_db")
 
     # Create a collection
     collection = client.get_or_create_collection("ai_documents")
@@ -29,21 +29,22 @@ def StoreEmbeddingsinChroma(embeddings, split_text_content):
         collection.add(ids=[str(i)], documents=[text], embeddings=[embedding.tolist()])
     return collection
 
-embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+def Indexing(query_text):
+    embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
-embeddings, split_text_content= GenerateEmbeddings(embedding_model)
-collection = StoreEmbeddingsinChroma(embeddings, split_text_content)
-# Define a search query
-query_text = "Mountains"
+    embeddings, split_text_content= GenerateEmbeddings(embedding_model)
+    collection = StoreEmbeddingsinChroma(embeddings, split_text_content)
+    
 
-# Convert the query into an embedding
-query_embedding = embedding_model.encode([query_text])[0]
+    # Convert the query into an embedding
+    query_embedding = embedding_model.encode([query_text])[0]
 
-# Search for the top 2 most relevant results
-results = collection.query(query_embeddings=[query_embedding.tolist()], n_results=2)
+    # Search for the top 2 most relevant results
+    results = collection.query(query_embeddings=[query_embedding.tolist()], n_results=2)
 
-# Print the results
-print(results["documents"])
+    # Print the results
+    #print(results["documents"])
+    return results
 
 
 

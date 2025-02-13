@@ -23,7 +23,7 @@ def listOfValidatedPDFs(directory):
 
     # Process each PDF file
     for pdf_file in pdf_files:
-        #print(f"================{pdf_file}==============")
+        print(f"================{pdf_file}==============")
         file_path = os.path.join(directory, pdf_file)
         
 
@@ -31,16 +31,16 @@ def listOfValidatedPDFs(directory):
             # Open and read the PDF file
             with open(file_path, 'rb') as file:
                 reader = PyPDF2.PdfReader(file)
-                #print(f"file={pdf_file} length={len(reader.pages)}")
+                print(f"file={pdf_file} length={len(reader.pages)}")
                 # Check if the PDF has at least one page
                 if len(reader.pages) > 0:
-                    #first_page = reader.pages[0]
+                    first_page = reader.pages[0]
                     result.append(file_path)
-                    #print(f"length of first page is {len(first_page)}")
-                    #print(first_page.extract_text())
+                    print(f"length of first page is {len(first_page)}")
+                    print(first_page.extract_text())
                 else:
                     print(f"'{pdf_file}' has no pages.")
-        except PyPDF2.PdfReadError:
+        except PyPDF2.PdfReader:
             print(f"Error: '{pdf_file}' is not a valid PDF or is corrupted.")
         except PermissionError:
             print(f"Error: Permission denied to read '{pdf_file}'.")
