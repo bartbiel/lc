@@ -14,4 +14,8 @@ pip install -U sentence-transformers <br>
 pip install fpdf <br>
 
 <br>
+pip install ollama<br>
+-pip install pypdf<br>
+-pip install tiktoken<br>
+
 

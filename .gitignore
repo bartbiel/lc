@@ -25,7 +25,5 @@ __pycache__/
 # Ignore pdf files
 .pdf
 
-vector_db
-*.ttf
 
-*.bin
+
