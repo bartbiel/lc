@@ -8,6 +8,7 @@ LANGCHAIN_API_KEY = os.getenv("API_LC")
 
 #Access source folder
 PDF_PATH=os.getenv("PDF_PATH")
+PDF_PERSIST=os.getenv("PDF_PERSIST")
 
 
 

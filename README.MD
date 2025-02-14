@@ -18,4 +18,8 @@ pip install ollama<br>
 -pip install pypdf<br>
 -pip install tiktoken<br>
 
+<h2>Run
+<br> olama server
+<br> npm start<br>
+uvicorn mistral:app --reload
 
